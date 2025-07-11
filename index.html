@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koo ওয়েব ভিউ (শিক্ষাগত প্রয়োজনে)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    # disclaimer {
+      padding: 0.75rem 1rem;
+      background: #fff3cd;
+      color: #856404;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #ffeeba;
+    }
+    #viewer {
+      flex: 1;
+      border: none;
+      width: 100%;
+    }
+    #launchBtn {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      background: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+    #launchBtn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Koo ওয়েব ভিউ</h1>
+  </header>
+
+  <div id="disclaimer">
+    **ডিসক্লেমার:** এখানে কোনো অ্যাপ তৈরি হয়েছে না—শুধুমাত্র শিক্ষাগত প্রয়োজনে ওয়েবসাইটটিকে হালকা অভিজ্ঞতা হিসাবে উপভোগ করার জন্য।  
+    কোনো বাণিজ্যিক বা পাবলিক ব্যবহার নয়।
+  </div>
+
+  <button id="launchBtn">এক ক্লিকে ওয়েবসাইট চালু করুন</button>
+
+  <!-- প্রথমে বোতাম ক্লিকের পর iframe দেখাবে -->
+  <iframe id="viewer" src="about:blank" allowfullscreen></iframe>
+
+  <script>
+    const btn = document.getElementById('launchBtn');
+    const viewer = document.getElementById('viewer');
+
+    btn.addEventListener('click', () => {
+      // iframe-এ অফিসিয়াল ওয়েবসাইট লোড
+      viewer.src = 'https://www.kooapp.com/';
+      // বোতামটি অদৃশ্য করা
+      btn.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
